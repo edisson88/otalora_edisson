@@ -1,8 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { UserEntity } from './users/user.entity';
 import { ClientEntity } from './clients/client.entity';
 import { PolicyEntity } from './policies/policy.entity';
@@ -30,7 +28,5 @@ import { PoliciesModule } from './policies/policies.module';
     ClientsModule,
     PoliciesModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}
