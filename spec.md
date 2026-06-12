@@ -216,7 +216,7 @@ POST   /clients               → crea un cliente nuevo
 
 La decisión que más tiempo tomó fue **dónde vive la lógica de los rangos de alerta**.
 
-La opción naïve es poner los 5 estados como un `enum` en la base de datos y actualizarlo con un cron job. Es lo que haría alguien que viene del mundo Excel — una columna más.
+La opción común es poner los 5 estados como un `enum` en la base de datos y actualizarlo con un cron job. Es lo que haría alguien que viene del mundo Excel — una columna más.
 
 La opción correcta es reconocer que el estado **no es un dato, es una función del tiempo**. `f(expirationDate, today) → status`. Mañana la misma póliza tendrá un estado diferente sin que nadie la toque. Eso no puede vivir en la base de datos.
 

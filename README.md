@@ -13,6 +13,8 @@ npm run seed
 
 # 3. Levantar backend y frontend en paralelo
 npm run dev
+
+
 ```
 
 - **Backend:** http://localhost:3000
